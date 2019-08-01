@@ -1,0 +1,19 @@
+//Now this is another file named as Variables.scss
+//As its name tells us that we can define all of the variables here with global scope
+//And can include them in our other styles.
+//Lets see the example
+/*
+* 1) First we can define all variables here.
+* 2) Then we will include this file in our main scss file.
+* 3) Then we can use the variables in our file.
+*/
+
+//Special Tip --> Always include this file on the top of the main file.
+
+//Variables
+
+$primary:rgb(27, 102, 172);
+$warning:rgb(238, 241, 12);
+$danger:rgba(241, 65, 53, 0.966);
+$success:rgb(32, 192, 32);
+$info:rgb(103, 241, 241);

@@ -1,0 +1,63 @@
+//Importing other scs files
+//This will allow us to import all the styles from Variables.scss and use them in our code.
+@import "./variables";
+
+//Variables - the variables are the best way to avoid repetation
+//like we can set some value to variables and we can use them across our whole styles.
+//we can declare the variable like below
+//***Tip: The variables in sass are always starts with $ sign.
+$color:white;
+
+//mixins to set the background color
+//Simple mixin without parameters
+@mixin background {
+    background: lightblue;
+}
+
+//Parameterized mixin for the flexbox display props
+@mixin flexbox($display, $content, $items, $direction) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: lightblue; //instead of repeating like this use mixins like below 
+    @include background(); //This will includes all the styles from the mixin.
+    height: 100vh;
+
+    //Intead of setting like this we can now use our mixin to set the flexbox props.
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //We can use flexbox properties using mixins like this.
+    @include flexbox(flex, center, center, column);
+
+    //nestings --> We can nest the styles of elements
+    //Here the div with class main resides inside the body so we can nest all the styles of .main inside the body
+    //This will help us later to recognize the parent-child relation easily.
+    .main {
+        width: 300px;
+        //we can use our variable in this way When it's compiled the value of variable is replaced at this place.
+        background: $color;
+        padding: 30px;
+        border: 1px solid $success; //This is the variable from imported file --> Variables.scss
+
+        //Inheritance in sass
+        //This will inherit all the styles which are defined for the .font
+        @extend .font;
+        //And if you dont want some of its styles then you can overwrite it like this.
+        font-family: sans-serif;
+    }
+
+    .font {
+        color: $primary;
+        font-family: Arial;
+        text-align: justify;
+    }
+}

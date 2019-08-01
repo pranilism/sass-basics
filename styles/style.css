@@ -1,0 +1,45 @@
+/*
+* 1) First we can define all variables here.
+* 2) Then we will include this file in our main scss file.
+* 3) Then we can use the variables in our file.
+*/
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: lightblue;
+  background: lightblue;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .main {
+  width: 300px;
+  background: white;
+  padding: 30px;
+  border: 1px solid #20c020;
+  font-family: sans-serif;
+}
+
+body .font, body .main {
+  color: #1b66ac;
+  font-family: Arial;
+  text-align: justify;
+}
+/*# sourceMappingURL=style.css.map */
