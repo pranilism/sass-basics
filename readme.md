@@ -16,5 +16,5 @@
  - Sass Compiler (Plugin)
  - Live Server (Plugin)
 
- by &copy; Pranil Tunga - <a href="http://www.advent-technogroup.com">Advent Technologies</a>
+ by &copy; <a href="https://pranilism.github.io/">Pranil Tunga</a>
  
